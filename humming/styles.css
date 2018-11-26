@@ -1,0 +1,1161 @@
+/*Import fonts */
+/*Light*/
+@font-face {
+  src: url(fonts/Pangram/Pangram-Light.otf);
+  font-family: P-light;
+}
+/*Bold*/
+@font-face {
+  src: url(fonts/Pangram/Pangram-ExtraBold.otf);
+  font-family: P-Ebold;
+}
+
+/*Body regular*/
+@font-face {
+  src: url(fonts/Pangram/Pangram-Regular.otf);
+  font-family: P-regular;
+}
+.team{
+      list-style-type: circle;
+      line-height: 2.5;
+}
+
+body,html{
+padding:0;
+margin:0;
+color:hsla(0,0%,0%,0.8);
+font-family: P-regular, sans-serif;
+font-size: 13pt;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden !important;
+}
+*{box-sizing: border-box; transition: 0.2s linear;-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;}
+.image-icon{
+    height: 60px;
+    padding: 10px;
+}
+/*P font*/
+p{
+font-family:  P-light,sans-serif;
+font-size: 18pt;
+}
+h2{
+  font-family:  P-Ebold,sans-serif;
+  font-size: 18pt;
+}
+/*Video btn*/
+.video_btn{
+  position: absolute;
+  right: 70px;
+  bottom: 50px;
+  color:white;
+  font-size: 28pt;
+  cursor: pointer;
+}
+.video_btn:hover{
+  color: lightgreen;
+  transition: 0.1s;
+  transform: scale(1.2)
+}
+/*Video player*/
+
+#video_player{
+    display: none;
+    position: absolute;
+    top: 0vh;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 20;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    box-sizing: border-box;
+    box-shadow: 0px 0px 2px black;
+    overflow: hidden;
+}
+
+.video_player_add{
+  transition: 0.4s linear;
+  padding: 0;
+  animation: video 0.4s linear;
+  animation-name: video;
+  animation-duration: 0.4s;
+  overflow: hidden;
+}
+@keyframes video{
+  from{opacity: 0}
+  to{opacity: 1}
+}
+#close_btn{
+  float: right;
+  border: 0;
+  outline: none;
+  background: red;
+  color:#ffff;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+#close_btn:hover{
+  background: #a40000;
+}
+
+img.title{
+width: 240px;
+position: relative;
+top: 10px
+}
+.outer_button{
+    width: 40px;
+    word-wrap: normal;
+    white-space: nowrap;
+    border-radius: 60px;
+    height: 20px;
+    background: grey;
+    position: relative;
+    right: -20px;
+}
+.change_arrow{
+    color:lightblue;
+}
+.inner_button{
+    position: relative;
+    border-radius: 100%;
+    height: 20px;
+    width: 20px;
+    border: 0;
+    outline: none;
+    background: black;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+}
+.inner_button_change{
+    left: 20px;
+    background: white !important;
+}
+.outer_button_change{
+    background: #27ae60;
+}
+.change_body{
+    background: black;
+    color:white;
+}
+/*Navbar*/
+.nav-title{
+    position: relative;
+    top:-20px;
+    color: #2980b9;
+    padding-left: 10px;
+
+ }
+.bird-icon-span{
+    position: relative;
+    top: 20px;
+    margin: 0 -8px;
+}
+.night_mode{
+    float: right;
+}
+a.link{
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+
+#navbar {
+  background: transparent;
+  color: rgb(13, 26, 38);
+  position: fixed;
+  top: 0;
+  height: 60px;
+  line-height: 60px;
+  width: 100vw;
+  z-index: 10;
+}
+#navbar.scrolled {
+  background-color: #fff !important;
+  transition: background-color 200ms linear;
+  box-shadow: 0px 0px 10px black;
+}
+.nav-wrapper {
+  margin: auto;
+  text-align: center;
+  width: 70%;
+} @media(max-width: 768px) {
+    .nav-wrapper {
+      width: 90%;
+    }
+  } @media(max-width: 638px) {
+      .nav-wrapper {
+        width: 100%;
+      }
+    }
+
+
+.logo {
+  float: left;
+  margin-left: 28px;
+  font-size: 1.5em;
+  height: 60px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+} .na-titleia(max-width: 768px) {
+    .logo {
+       margin-left: 5px;
+    }
+  }
+
+#navbar ul {
+  display: inline-block;
+  float: right;
+  list-style: none;
+  /* margin-right: 14px; */
+  margin-top: -2px;
+  text-align: right;
+  transition: transform 0.5s ease-out;
+  -webkit-transition: transform 0.5s ease-out;
+
+} @media(max-width: 640px) {
+    #navbar ul {
+      display: none;
+    }
+  } @media(orientation: landscape) {
+      #navbar ul {
+        display: inline-block;
+      }
+    }
+
+#navbar li {
+  display: inline-block;
+}
+/*Fixing Navbar Issue*/
+@media (min-width:640px) and (max-width:990px){
+    .logo{
+        float:none
+    }
+
+ #navbar{
+   margin: 0 auto !important;
+     height: 12vh;
+     line-height: 1;
+    }
+    #navbar .link{
+        height: 20px;;
+    }
+    #navbar li{
+        position: relative;
+        left: -120px;
+    }
+
+}
+#navbar li a {
+  color: rgb(13, 26, 38);
+  display: block;
+  font-size: 0.7em;
+  height: 50px;
+  letter-spacing: 1px;
+  margin: 0 20px;
+  padding: 0 4px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+}
+
+#navbar li a:hover {
+  /* border-bottom: 1px solid rgb(28, 121, 184); */
+  color: rgb(28, 121, 184);
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+}
+
+/* Animated Bottom Line */
+#navbar li a:before, #navbar li a:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  bottom: -1px;
+  background: rgb(13, 26, 38);
+}
+
+#navbar li a:before {
+  left: 0;
+  transition: 0.5s;
+}
+
+#navbar li a:after {
+  background: rgb(13, 26, 38);
+  right: 0;
+  /* transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); */
+}
+
+#navbar li a:hover:before {
+  background: rgb(13, 26, 38);
+  width: 100%;
+  transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+}
+
+#navbar li a:hover:after {
+  background: transparent;
+  width: 100%;
+  /* transition: 0s; */
+}
+
+
+
+/*======================================================
+                    Mobile Menu Menu Icon
+  ======================================================*/
+@media(max-width: 640px) {
+  .menuIcon {
+    cursor: pointer;
+    display: block;
+    position: fixed;
+    right: 15px;
+    top: 20px;
+    height: 23px;
+    width: 27px;
+    z-index: 120;
+  }
+
+  /* Icon Bars */
+  .icon-bars {
+    background: rgb(13, 26, 38);
+    position: absolute;
+    left: 1px;
+    top: 45%;
+    height: 2px;
+    width: 20px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  .icon-bars::before {
+    background: rgb(13, 26, 38);
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -8px;
+    height: 2px;
+    width: 20px;
+/*     -webkit-transition: top 0.2s ease 0.3s;
+    transition: top 0.2s ease 0.3s; */
+    -webkit-transition: 0.3s width 0.4s;
+    transition: 0.3s width 0.4s;
+  }
+
+  .icon-bars::after {
+    margin-top: 0px;
+    background: rgb(13, 26, 38);
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    height: 2px;
+    width: 20px;
+/*     -webkit-transition: top 0.2s ease 0.3s;
+    transition: top 0.2s ease 0.3s; */
+    -webkit-transition: 0.3s width 0.4s;
+    transition: 0.3s width 0.4s;
+  }
+
+  /* Bars Shadows */
+  .icon-bars.overlay {
+    background: rgb(97, 114, 129);
+    background: rgb(183, 199, 211);
+    width: 20px;
+    animation: middleBar 3s infinite 0.5s;
+    -webkit-animation: middleBar 3s infinite 0.5s;
+  } @keyframes middleBar {
+      0% {width: 0px}
+      50% {width: 20px}
+      100% {width: 0px}
+    } @-webkit-keyframes middleBar {
+        0% {width: 0px}
+        50% {width: 20px}
+        100% {width: 0px}
+      }
+
+  .icon-bars.overlay::before {
+    background: rgb(97, 114, 129);
+    background: rgb(183, 199, 211);
+    width: 10px;
+    animation: topBar 3s infinite 0.2s;
+    -webkit-animation: topBar 3s infinite 0s;
+  } @keyframes topBar {
+      0% {width: 0px}
+      50% {width: 10px}
+      100% {width: 0px}
+    } @-webkit-keyframes topBar {
+        0% {width: 0px}
+        50% {width: 10px}
+        100% {width: 0px}
+      }
+
+  .icon-bars.overlay::after {
+    background: rgb(97, 114, 129);
+    background: rgb(183, 199, 211);
+    width: 15px;
+    animation: bottomBar 3s infinite 1s;
+    -webkit-animation: bottomBar 3s infinite 1s;
+  } @keyframes bottomBar {
+      0% {width: 0px}
+      50% {width: 15px}
+      100% {width: 0px}
+    } @-webkit-keyframes bottomBar {
+        0% {width: 0px}
+        50% {width: 15px}
+        100% {width: 0px}
+      }
+
+
+  /* Toggle Menu Icon */
+  .menuIcon.toggle .icon-bars {
+    top: 5px;
+    transform: translate3d(0, 5px, 0) rotate(135deg);
+    transition-delay: 0.1s;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .menuIcon.toggle .icon-bars::before {
+    top: 0;
+    transition-delay: 0.1s;
+    opacity: 0;
+  }
+
+  .menuIcon.toggle .icon-bars::after {
+    top: 10px;
+    transform: translate3d(0, -10px, 0) rotate(-270deg);
+    transition-delay: 0.1s;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .menuIcon.toggle .icon-bars.overlay {
+    width: 20px;
+    opacity: 0;
+    -webkit-transition: all 0s ease 0s;
+    transition: all 0s ease 0s;
+  }
+}
+
+
+/*======================================================
+                   Responsive Mobile Menu
+  ======================================================*/
+.overlay-menu {
+  background: lightblue;
+  color: rgb(13, 26, 38);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 15px;
+  transform: translateX(-100%);
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+  z-index: 110;
+  overflow: hidden;
+}
+
+.overlay-menu ul, .overlay-menu li {
+  display: block;
+  position: relative;
+}
+
+.overlay-menu li a {
+  display: block;
+  font-size: 1.8em;
+  letter-spacing: 4px;
+/*   opacity: 0; */
+  padding: 10px 0;
+  text-align: right;
+  text-transform: uppercase;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+/*   -webkit-transition: 0.2s opacity 0.2s ease-out;
+  transition: 0.2s opacity 0.2s ease-out; */
+}
+
+.overlay-menu li a:hover,
+.overlay-menu li a:active {
+  color: rgb(28, 121, 184);
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+/*Container*/
+.container{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+  width: 100%;
+  height: auto;
+  background: transparent;
+  word-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 5px 25px;
+}
+.col{
+	flex: 2;
+  padding: 15px 30px ;
+
+}
+	.col :first-child { margin-left: 0; }
+	.col:last-child { margin-right: 0; }
+
+
+
+@media screen and (max-width: 990px) {
+  .container .col {
+		margin-bottom: 5px;
+    flex-basis: 40%;
+    }
+        .fix_margin_1{
+        margin-top: 120px !important;
+    }
+		 .container .col:nth-last-child(2) {
+			margin-right: 0;
+		}
+		 .container .col:last-child {
+			flex-basis: 100%;
+			margin: 0;
+		}
+}
+
+@media screen and (max-width: 680px) {
+	.container .col {
+		flex-basis: 100%;
+		margin: 0 0 5px 0;
+	}
+        .fix_margin_1{
+        margin-top: 120px !important;
+    }
+
+}
+
+.fix_margin_1{
+margin-top: 60px;
+}
+/*BUTTON*/
+
+.btn{
+    border:2px solid black;
+    outline:none;
+    background: transparent;
+    padding: 8px 25px;
+    border-radius: 20px;
+
+}
+.btn:hover{
+    background: black;
+    color:white;
+    border: 2px solid blue;
+   cursor: pointer;
+}
+/*Singup Navbar*/
+.custom-btn {
+  padding: 10px 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+.btn-5 {
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.btn-5 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-5:before,
+.btn-5:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #396cb1;
+  transition: all 0.3s ease;
+}
+.btn-5:before {
+  height: 50%;
+  width: 2px;
+}
+.btn-5:after {
+  width: 20%;
+  height: 2px;
+}
+.btn-5:hover:before {
+  height: 100%;
+}
+.btn-5:hover:after {
+  width: 100%;
+}
+.btn-5 span:before,
+.btn-5 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #396cb1;
+  transition: all 0.3s ease;
+}
+.btn-5 span:before {
+  width: 2px;
+  height: 50%;
+}
+.btn-5 span:after {
+  width: 20%;
+  height: 2px;
+}
+.btn-5 span:hover:before {
+  height: 100%;
+}
+.btn-5 span:hover:after {
+  width: 100%;
+}
+/*BIG Singup*/
+.btn-13 {
+  border: 2px solid #000;
+  z-index: 1;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+
+
+}
+.fa-ethereum{
+  font-size: 18pt;
+}
+.btn-13:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: #396cb1;
+  transition: all 0.3s ease;
+}
+.btn-13:hover {
+  color: #fff;
+}
+.btn-13:hover:after {
+  top: auto;
+  bottom: 0;
+  height: 100%;
+}
+.btn-13:active {
+  top: 2px;
+}
+.facebook:hover{color:#686de0}
+.instagram:hover{color:red}
+.twitter:hover{color:skyblue}
+.linkedin:hover{color:#4834d4}
+/**** BTN No. 6 ****/
+.btn-6 {
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+
+}
+.btn-6 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-6:before,
+.btn-6:after {
+  position: absolute;
+  content: "";
+  height: 0%;
+  width: 2px;
+  background: #000;
+}
+.btn-6:before {
+  right: 0;
+  top: 0;
+  transition: all 0.1s ease;
+}
+.btn-6:after {
+  left: 0;
+  bottom: 0;
+  transition: all 0.1s 0.2s ease;
+}
+.btn-6:hover:before {
+  transition: all 0.1s 0.2s ease;
+  height: 100%;
+
+}
+.btn-6:hover:after {
+  transition: all 0.1s ease;
+  height: 100%;
+}
+.btn-6 span:before,
+.btn-6 span:after {
+  position: absolute;
+  content: "";
+  background: #000;
+}
+.btn-6 span:before {
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 2px;
+  transition: all 0.1s 0.1s ease;
+}
+.btn-6 span:after {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+}
+.btn-6 span:hover:before {
+  width: 100%;
+
+}
+
+.download_app{
+  display: flex;
+  flex-direction: column;
+  align-items:  center;
+  line-height: 2;
+  justify-content: center;
+}
+
+.main_app{
+transform: translateY(10vh);
+
+
+}
+
+.main_app_col{
+color: white;
+background: linear-gradient(rgba(57, 108, 177, 0.3),rgba(57, 108, 177, 0.3)),url(https://www.desktop-background-wallpaper.com/wp-content/uploads/2018/04/0005-Desktop-Background-Wallpaper-991x557.jpg)
+}
+
+h1{
+  text-align: center;
+  margin-top: 5%;
+}
+
+/*=======Main Screen========*/
+
+.block{
+  width: 100%;
+  height: 85vh;
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
+}
+.img-parallax {
+  width: 100vmax;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,0);
+  pointer-events: none
+}
+*{transition: 0.2s linear}
+
+.hide{
+    opacity: 0;
+    transition: 04.s linear;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.change_color{
+    color: darkslateblue;
+    letter-spacing: 3px;
+}
+
+/*our_scope*/
+
+.our_scope{
+  text-align: center;
+  background: #ffff;
+  border-top: none;
+  outline: none;
+  padding: 0 !important;
+
+}
+.truested_by{
+  margin-bottom: 5%;
+  padding: 0;
+}
+.truested_by_col{
+  text-align: center;
+    border: none;
+    outline: none;
+   width: 100px;
+   height: 100px;
+   -webkit-box-shadow: inset 5px 0 10px -5px #888;
+           box-shadow: inset 5px 0 10px -5px #888;
+
+}
+.scope{
+  -webkit-box-shadow: inset 5px 0 10px -5px #888;
+          box-shadow: inset 5px 0 10px -5px #888;
+}
+.main_banner{
+  transform: translate(20%, 40vh);
+  width: 480px;
+  background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5));
+  animation: main_banner 1s linear;
+  animation-name: main_banner;
+  animation-duration: 1s;
+
+}
+.sub_container{
+  margin-top: 2%;
+}
+.sub_cols{
+  width: 340px
+}
+@keyframes main_banner{
+  from{opacity: 0}
+  to{opacity: 1}
+}
+
+
+/* .clip_path_image{
+  -webkit-clip-path: polygon(40% 0, 100% 0%, 100% 100%, 15% 99%);
+  clip-path: polygon(40% 0, 100% 0%, 100% 100%, 15% 99%);
+
+} */
+.works_banner{
+  color:white;
+  background: black;
+  display: flex;
+  transform: translate(25%, 20vh);
+}
+
+.works_banner:hover .each_banner::after{
+    content: attr(data);
+    white-space: normal;
+    font-size: 12pt;
+    padding-top: 10px;
+    transition: 0.3s linear;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+}
+.works_banner:hover{
+  background: linear-gradient(rgba(57, 108, 177, 0.8),rgba(57, 108, 177, 0.8));
+  cursor: pointer;
+  color: white;
+  transition: 0.3s linear;
+
+}
+
+.arrow_down{
+  font-size: 22pt;
+  position: absolute;
+  bottom: 30px;
+  color: white;
+  animation: arrow_down ease-in alternate infinite;
+  animation-name: arrow_down;
+  animation-duration: 1.2s;
+  cursor: pointer;
+  z-index: 10;
+}
+
+
+@keyframes arrow_down {
+  from{bottom: 30px}
+  to{bottom: 50px;}
+}
+
+
+.fix_margin{
+  text-align: center;
+}
+
+.service{
+    color: white;
+    vertical-align: middle;
+    line-height: 1.5;
+}
+.service .h2_tag_service{
+  line-height: 3;
+}
+.service_1{
+  background-image: url('http://www.apartmentshowcase.com/blog/wp-content/uploads/2017/12/cleaning-supplies.jpg');
+
+}
+.service_2{
+  background-image: url(https://www.exercise.com/blog/wp-content/uploads/2017/08/Depositphotos_90062916_original-1600x1600.jpg);
+
+}
+.service_3{
+  background: url(http://haverfordphonerepair.com/wp-content/uploads/2018/07/mobile-repairing-business-in-india-990x500.jpg)
+
+}
+
+.service_4{
+  background: url(http://vivimar.com/wp-content/uploads/2018/05/graphic-design.jpg)
+}
+
+.service_5{
+  background: url(https://www.rd.com/wp-content/uploads/2018/02/01_additional_best-home-improvements-that-will-double-the-cost-of-your-home_761607949_grekov-s-760x506.jpg)
+}
+
+.service_6{
+  background: url(https://ehg.net/wp-content/uploads/2016/02/Pet-Care-Product-Labels-EHG.jpg)
+}
+
+.service_7{
+  background: url(https://www.windowscentral.com/sites/wpcentral.com/files/styles/xlarge/public/field/image/2016/06/video-editing-software-hero-02.jpg?itok=UvyfBJGQ)
+}
+
+.service_8{
+  background: url(http://www.masscommunicationtalk.com/wp-content/uploads/2016/02/writing-1.jpg)
+}
+
+.service_1:hover{
+  background-image: linear-gradient(rgba(57, 108, 177, 0.6),rgba(57, 108, 177, 0.6)),url('http://www.apartmentshowcase.com/blog/wp-content/uploads/2017/12/cleaning-supplies.jpg');
+
+}
+.service_2:hover{
+  background-image: linear-gradient(rgba(57, 108, 177, 0.6),rgba(57, 108, 177, 0.6)),url(https://www.exercise.com/blog/wp-content/uploads/2017/08/Depositphotos_90062916_original-1600x1600.jpg);
+
+}
+.service_3:hover{
+  background: linear-gradient(rgba(57, 108, 177, 0.6),rgba(57, 108, 177, 0.6)),url(http://haverfordphonerepair.com/wp-content/uploads/2018/07/mobile-repairing-business-in-india-990x500.jpg)
+
+}
+
+.service_4:hover{
+  background: linear-gradient(rgba(57, 108, 177, 0.6),rgba(57, 108, 177, 0.6)),url(http://vivimar.com/wp-content/uploads/2018/05/graphic-design.jpg)
+}
+
+.service_5:hover{
+  background: linear-gradient(rgba(57, 108, 177, 0.6),rgba(57, 108, 177, 0.6)),url(https://www.rd.com/wp-content/uploads/2018/02/01_additional_best-home-improvements-that-will-double-the-cost-of-your-home_761607949_grekov-s-760x506.jpg)
+}
+
+.service_6:hover{
+  background: linear-gradient(rgba(57, 108, 177, 0.6),rgba(57, 108, 177, 0.6)),url(https://ehg.net/wp-content/uploads/2016/02/Pet-Care-Product-Labels-EHG.jpg)
+}
+
+.service_7:hover{
+  background: linear-gradient(rgba(57, 108, 177, 0.6),rgba(57, 108, 177, 0.6)),url(https://www.windowscentral.com/sites/wpcentral.com/files/styles/xlarge/public/field/image/2016/06/video-editing-software-hero-02.jpg?itok=UvyfBJGQ)
+}
+
+.service_8:hover{
+  background: linear-gradient(rgba(57, 108, 177, 0.6),rgba(57, 108, 177, 0.6)),url(http://www.masscommunicationtalk.com/wp-content/uploads/2016/02/writing-1.jpg)
+}
+
+
+.service{
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 150px;
+  margin: 5px 15px;
+}
+
+.service .p_tag_service{
+  opacity: 0;
+  font-size: 0;
+  text-align: center;
+
+}
+.service:hover .h2_tag_service {
+display: none;
+transition: 0.3s linear;
+}
+
+.service:hover  .p_tag_service {
+opacity: 1;
+font-size: 10pt;
+
+}
+.service:hover{
+  cursor: pointer;
+transition: 0.5s linear;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+
+.player_1{
+  background: url(http://www.gatewaychurch.com/wp-content/uploads/2015/05/job-graphic-designer.jpg);
+
+}
+
+.player_2{
+  background: url(http://c93fea60bb98e121740fc38ff31162a8.s3.amazonaws.com/wp-content/uploads/2017/09/graphic_designer.jpg);
+
+}
+.player_3{
+  background: url(https://www.syncee.io/wp-content/uploads/2017/10/designer-at-desk_4460x4460.jpg);
+
+}
+.player_4{
+  background: url(http://www.collegequest.com/wp-content/uploads/what-do-graphic-designers-do.jpg);
+
+}
+.player_5{
+  background: url(https://www.webascender.com/wp-content/uploads/team-1.jpg);
+
+}
+.player_6{
+  background: url(http://cardesignnews.com/media/12310640/how-to-be-a-car-designer-pt2.jpg);
+
+}
+
+.player_1:hover{
+  background:linear-gradient(rgba(57, 108, 177, 0.6),rgba(57, 108, 177, 0.6)),url(http://www.gatewaychurch.com/wp-content/uploads/2015/05/job-graphic-designer.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.player_2:hover{
+  background: linear-gradient(rgba(57, 108, 177, 0.6),rgba(57, 108, 177, 0.6)),url(http://c93fea60bb98e121740fc38ff31162a8.s3.amazonaws.com/wp-content/uploads/2017/09/graphic_designer.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.player_3:hover{
+  background: linear-gradient(rgba(57, 108, 177, 0.6),rgba(57, 108, 177, 0.6)),url(https://www.syncee.io/wp-content/uploads/2017/10/designer-at-desk_4460x4460.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.player_4:hover{
+  background: linear-gradient(rgba(57, 108, 177, 0.6),rgba(57, 108, 177, 0.6)),url(http://www.collegequest.com/wp-content/uploads/what-do-graphic-designers-do.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.player_5:hover{
+  background: linear-gradient(rgba(57, 108, 177, 0.6),rgba(57, 108, 177, 0.6)),url(https://www.webascender.com/wp-content/uploads/team-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.player_6:hover{
+  background: linear-gradient(rgba(57, 108, 177, 0.6),rgba(57, 108, 177, 0.6)), url(http://cardesignnews.com/media/12310640/how-to-be-a-car-designer-pt2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1.fix_title{
+  margin-left: 20px !important;
+}
+
+.players:hover .user_data{
+  opacity: 1;
+}
+.players{
+  -webkit-box-shadow:none;
+  box-shadow: none;
+    height: 180px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+      margin: 0;
+
+}
+.user_data{
+  text-align: left;
+  font-family: P-regular;;
+  line-height: 1.3;
+  position: relative;
+  bottom: -5px;
+  left: -20px;
+  opacity: 0;
+
+}
+.fa-star{
+  color:red;
+}
+.fa-star-half-alt{
+  color: #e84118;
+}
+
+.footer{
+  background: black;
+  height: 15%;
+  color:white;
+}
+.footer_links, .social_links{
+  margin-right: 35px;
+}
+
+a.social_links{
+text-align: center;
+position: relative;
+left: 150px;
+font-size: 18pt;
+}
+.footer_links:hover{
+  color:lightblue;
+}
+
+.footer_image{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+width: 65%;
+position: relative;
+top: 20px;
+left: 50px;
+margin: 0 auto;
+text-align: center;
+}
+@media (max-width: 600px){
+     .slide_titles{
+        position: relative;
+        left: -70px
+    }
+    .main_banner{
+      transform: translate(-8%, 20vh);
+      width: 400px;
+    }
+    .works_banner:hover .each_banner::after{
+        white-space: pre-wrap;
+        font-size: 13px;
+        letter-spacing: 0;
+        padding: 0px;
+        transform: translate(0,0);
+    }
+    .main_app{
+    transform: translateY(2vh);
+    }
+
+}
